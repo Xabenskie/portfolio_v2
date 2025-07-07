@@ -91,7 +91,10 @@ export function Navbar() {
 
 	return (
 		<div className='fixed top-0 left-0 right-0 z-50 flex flex-row lg:static lg:flex-col gap-4 items-center justify-center lg:justify-start w-full lg:w-auto backdrop-blur-xl lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none py-2 lg:py-0 border-b border-gray-200/60 dark:border-gray-700/60 lg:border-none shadow-lg lg:shadow-none'>
-			<LogoIcon className='w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] dark:opacity-55 hidden sm:block transition-all duration-300 hover:scale-110 hover:drop-shadow-lg' />
+			<LogoIcon
+				className='w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] dark:opacity-55 hidden sm:block transition-all duration-300 hover:scale-110 hover:drop-shadow-lg cursor-pointer'
+				onClick={() => scrollToSection('1')}
+			/>
 
 			<nav className='bg-gradient-to-r from-[#D1C4E9]/90 to-[#E1BEE7]/90 dark:from-[#3f3668]/90 dark:to-[#4a3d6e]/90 lg:from-[#D1C4E9] lg:to-[#E1BEE7] lg:dark:from-[#3f3668] lg:dark:to-[#4a3d6e] rounded-xl lg:rounded-2xl px-3 py-2 lg:px-[26px] lg:py-[30px] w-full max-w-md mx-auto lg:max-w-none lg:w-auto shadow-md hover:shadow-lg lg:shadow-lg lg:hover:shadow-xl transition-all duration-300 border border-white/30 dark:border-gray-600/40 lg:border-white/20 lg:dark:border-gray-600/30 backdrop-blur-xl lg:backdrop-blur-none'>
 				<ul className='flex flex-row lg:flex-col items-center gap-4 lg:gap-10 justify-center lg:justify-start'>

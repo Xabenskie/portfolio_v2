@@ -2,6 +2,10 @@
 
 > A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS
 
+## 🌐 Live Demo
+
+**[🔗 View Live Portfolio](https://portfolio-v2-rho-liard.vercel.app/)**
+
 [![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.2-blue.svg)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.15-38B2AC.svg)](https://tailwindcss.com/)
@@ -43,6 +47,10 @@
 
 ## 🚀 Getting Started
 
+### 🌐 Quick Start
+
+**[View the live demo](https://portfolio-v2-rho-liard.vercel.app/)** - No installation required!
+
 ### Prerequisites
 
 - Node.js (v18 or higher)
@@ -81,6 +89,14 @@ npm run build
 # Preview the build
 npm run preview
 ```
+
+### 🚀 Deployment
+
+This project is deployed on **Vercel** for optimal performance:
+
+- **Live URL**: [https://portfolio-v2-rho-liard.vercel.app/](https://portfolio-v2-rho-liard.vercel.app/)
+- **Platform**: Vercel (Recommended for React/Vite projects)
+- **Auto-deployment**: Connected to GitHub for continuous deployment
 
 ## 📁 Project Structure
 
