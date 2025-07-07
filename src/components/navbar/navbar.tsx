@@ -90,7 +90,7 @@ export function Navbar() {
 	}, [])
 
 	return (
-		<div className='fixed top-0 left-0 right-0 z-50 flex flex-row lg:static lg:flex-col gap-4 items-center justify-center lg:justify-start w-full lg:w-auto backdrop-blur-xl lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none py-2 lg:py-0 border-b border-gray-200/60 dark:border-gray-700/60 lg:border-none shadow-lg lg:shadow-none'>
+		<div className='fixed top-0 left-0 right-0 z-50 flex flex-row lg:static lg:flex-col gap-4 items-center justify-center lg:justify-start w-full lg:w-auto backdrop-blur-xl bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none py-2 lg:py-0 border-b border-gray-200/60 dark:border-gray-700/60 lg:border-none shadow-lg lg:shadow-none'>
 			<LogoIcon
 				className='w-[50px] h-[50px] lg:w-[80px] lg:h-[80px] dark:opacity-55 hidden sm:block transition-all duration-300 hover:scale-110 hover:drop-shadow-lg cursor-pointer'
 				onClick={() => scrollToSection('1')}
