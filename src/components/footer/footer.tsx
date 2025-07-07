@@ -104,7 +104,7 @@ export default function Footer() {
 				<div className='text-center'>
 					<button
 						onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-						className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#9C27B0] to-[#651FFF] text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm font-medium'
+						className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#9C27B0] to-[#651FFF] text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm font-medium cursor-pointer'
 					>
 						<svg
 							className='w-4 h-4'
