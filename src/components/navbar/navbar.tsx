@@ -1,50 +1,9 @@
 import LogoIcon from '@assets/logo.svg?react'
 import type React from 'react'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { LanguageToggle } from '../common/LanguageToggle'
 import { ThemeToggle } from './ThemeToggle'
-
-const MENU: {
-	title: string
-	icon: React.ReactNode
-	sectionId: string
-}[] = [
-	{
-		title: 'Who am I?',
-		sectionId: '1',
-		icon: (
-			<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
-				<path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' />
-			</svg>
-		)
-	},
-	{
-		title: 'About me',
-		sectionId: '2',
-		icon: (
-			<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
-				<path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z' />
-			</svg>
-		)
-	},
-	{
-		title: 'My Projects',
-		sectionId: '3',
-		icon: (
-			<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
-				<path d='M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm6 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm5 15H4V8h5.08L12 10.83 14.92 8H20v11z' />
-			</svg>
-		)
-	},
-	{
-		title: 'Contact',
-		sectionId: '4',
-		icon: (
-			<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
-				<path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' />
-			</svg>
-		)
-	}
-]
 
 const scrollToSection = (sectionId: string) => {
 	const element = document.getElementById(sectionId)
@@ -58,6 +17,50 @@ const scrollToSection = (sectionId: string) => {
 
 export function Navbar() {
 	const [activeSection, setActiveSection] = useState<string>('')
+	const { t } = useTranslation()
+
+	const MENU: {
+		title: string
+		icon: React.ReactNode
+		sectionId: string
+	}[] = [
+		{
+			title: t('nav.whoAmI'),
+			sectionId: '1',
+			icon: (
+				<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
+					<path d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' />
+				</svg>
+			)
+		},
+		{
+			title: t('nav.about'),
+			sectionId: '2',
+			icon: (
+				<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
+					<path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z' />
+				</svg>
+			)
+		},
+		{
+			title: t('nav.projects'),
+			sectionId: '3',
+			icon: (
+				<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
+					<path d='M4 5c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2H4zm0 2h16v10H4V7zm2 12h12v2H6v-2z' />
+				</svg>
+			)
+		},
+		{
+			title: t('nav.contact'),
+			sectionId: '4',
+			icon: (
+				<svg className='w-[28px] h-[29px] fill-current' viewBox='0 0 24 24'>
+					<path d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z' />
+				</svg>
+			)
+		}
+	]
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -83,6 +86,7 @@ export function Navbar() {
 		handleScroll() // Check initial position
 
 		return () => window.removeEventListener('scroll', handleScroll)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	return (
@@ -122,6 +126,10 @@ export function Navbar() {
 							</li>
 						)
 					})}
+
+					<li>
+						<LanguageToggle />
+					</li>
 
 					<li>
 						<ThemeToggle />

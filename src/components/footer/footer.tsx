@@ -1,4 +1,7 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Footer() {
+	const { t } = useTranslation()
 	const currentYear = new Date().getFullYear()
 
 	const socialLinks = [
@@ -45,7 +48,7 @@ export default function Footer() {
 								Xabenskie
 							</p>
 							<p className='text-sm text-gray-600 dark:text-gray-300'>
-								Frontend Developer & UI/UX Enthusiast
+								{t('footer.role')}
 							</p>
 						</div>
 					</div>
@@ -72,10 +75,10 @@ export default function Footer() {
 					{/* Copyright */}
 					<div className='text-center lg:text-right'>
 						<p className='text-sm text-gray-600 dark:text-gray-300 font-medium'>
-							© {currentYear} Xabenskie. All rights reserved.
+							© {currentYear} Xabenskie. {t('footer.allRights')}
 						</p>
 						<p className='text-xs text-gray-500 dark:text-gray-400 mt-1'>
-							Made with ❤️ using React & Tailwind CSS
+							{t('footer.madeWith')}
 						</p>
 					</div>
 				</div>
@@ -102,7 +105,7 @@ export default function Footer() {
 								d='M5 10l7-7m0 0l7 7m-7-7v18'
 							/>
 						</svg>
-						Back to Top
+						{t('footer.backToTop')}
 					</button>
 				</div>
 			</div>

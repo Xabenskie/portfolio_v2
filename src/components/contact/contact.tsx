@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Contact() {
+	const { t } = useTranslation()
 	const [isVisible, setIsVisible] = useState(false)
 	const [formData, setFormData] = useState({
 		name: '',
@@ -71,7 +73,7 @@ export default function Contact() {
 					/>
 				</svg>
 			),
-			title: 'Email',
+			title: t('contact.info.email'),
 			value: 'xabenskie@example.com',
 			href: 'mailto:xabenskie@example.com'
 		},
@@ -91,7 +93,7 @@ export default function Contact() {
 					/>
 				</svg>
 			),
-			title: 'Phone',
+			title: t('contact.info.phone'),
 			value: '+1 (555) 123-4567',
 			href: 'tel:+15551234567'
 		},
@@ -117,7 +119,7 @@ export default function Contact() {
 					/>
 				</svg>
 			),
-			title: 'Location',
+			title: t('contact.info.location'),
 			value: 'New York, NY',
 			href: '#'
 		}
@@ -164,7 +166,7 @@ export default function Contact() {
 								: 'opacity-0 translate-y-8'
 						}`}
 					>
-						Get In Touch
+						{t('contact.title')}
 					</h2>
 					<p
 						className={`text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-all duration-1000 delay-500 ${
@@ -173,8 +175,7 @@ export default function Contact() {
 								: 'opacity-0 translate-y-8'
 						}`}
 					>
-						I'm always open to discussing new opportunities and exciting
-						projects. Let's create something amazing together!
+						{t('contact.description')}
 					</p>
 				</div>
 
@@ -189,7 +190,7 @@ export default function Contact() {
 					>
 						<div className='bg-white/50 dark:bg-gray-800/50 rounded-2xl p-6 backdrop-blur-sm border border-white/20 dark:border-gray-700/50'>
 							<h3 className='text-xl font-bold text-gray-800 dark:text-white mb-6'>
-								Contact Information
+								{t('contact.info.title')}
 							</h3>
 							<div className='space-y-4'>
 								{contactInfo.map((item, index) => (
@@ -220,7 +221,7 @@ export default function Contact() {
 						{/* Social Links */}
 						<div className='bg-white/50 dark:bg-gray-800/50 rounded-2xl p-6 backdrop-blur-sm border border-white/20 dark:border-gray-700/50'>
 							<h3 className='text-xl font-bold text-gray-800 dark:text-white mb-6'>
-								Follow Me
+								{t('contact.social.title')}
 							</h3>
 							<div className='flex gap-4'>
 								{socialLinks.map((social, index) => (
@@ -251,7 +252,7 @@ export default function Contact() {
 					>
 						<div className='bg-white/50 dark:bg-gray-800/50 rounded-2xl p-6 backdrop-blur-sm border border-white/20 dark:border-gray-700/50'>
 							<h3 className='text-xl font-bold text-gray-800 dark:text-white mb-6'>
-								Send Me a Message
+								{t('contact.form.title')}
 							</h3>
 							<form onSubmit={handleSubmit} className='space-y-4'>
 								<div>
@@ -259,7 +260,7 @@ export default function Contact() {
 										htmlFor='name'
 										className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
 									>
-										Name
+										{t('contact.form.name')}
 									</label>
 									<input
 										type='text'
@@ -269,7 +270,7 @@ export default function Contact() {
 										onChange={handleInputChange}
 										required
 										className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/70 dark:bg-gray-700/70 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-[#9C27B0] focus:border-transparent transition-all duration-300'
-										placeholder='Your Name'
+										placeholder={t('contact.form.namePlaceholder')}
 									/>
 								</div>
 								<div>
@@ -277,7 +278,7 @@ export default function Contact() {
 										htmlFor='email'
 										className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
 									>
-										Email
+										{t('contact.form.email')}
 									</label>
 									<input
 										type='email'
@@ -287,7 +288,7 @@ export default function Contact() {
 										onChange={handleInputChange}
 										required
 										className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/70 dark:bg-gray-700/70 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-[#9C27B0] focus:border-transparent transition-all duration-300'
-										placeholder='your.email@example.com'
+										placeholder={t('contact.form.emailPlaceholder')}
 									/>
 								</div>
 								<div>
@@ -295,7 +296,7 @@ export default function Contact() {
 										htmlFor='message'
 										className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
 									>
-										Message
+										{t('contact.form.message')}
 									</label>
 									<textarea
 										id='message'
@@ -305,7 +306,7 @@ export default function Contact() {
 										required
 										rows={4}
 										className='w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/70 dark:bg-gray-700/70 text-gray-800 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-[#9C27B0] focus:border-transparent transition-all duration-300 resize-none'
-										placeholder='Your message here...'
+										placeholder={t('contact.form.messagePlaceholder')}
 									/>
 								</div>
 								<button
@@ -328,15 +329,15 @@ export default function Contact() {
 													d='M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15'
 												/>
 											</svg>
-											Sending...
+											{t('contact.form.sending')}
 										</span>
 									) : (
-										'Send Message'
+										t('contact.form.submit')
 									)}
 								</button>
 								{submitStatus === 'success' && (
 									<div className='text-green-600 dark:text-green-400 text-center text-sm animate-bounce-in'>
-										Message sent successfully! I'll get back to you soon.
+										{t('contact.form.success')}
 									</div>
 								)}
 							</form>

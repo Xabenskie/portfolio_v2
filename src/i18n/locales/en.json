@@ -1,0 +1,114 @@
+{
+	"nav": {
+		"whoAmI": "Who am I?",
+		"about": "About me",
+		"projects": "My Projects",
+		"contact": "Contact"
+	},
+	"header": {
+		"greeting": "Hi everyone,",
+		"name": "I'm Xabenskie, Frontend Developer",
+		"welcome": "Welcome to my portfolio!"
+	},
+	"about": {
+		"title": "About Me",
+		"description": "I'm a passionate frontend developer with expertise in modern web technologies and a love for creating beautiful, functional user experiences.",
+		"whoAmI": {
+			"title": "Who Am I?",
+			"description": "I'm a frontend developer passionate about creating modern, responsive web applications. I love working with React, TypeScript, and modern CSS frameworks to build user-friendly interfaces."
+		},
+		"whatIDo": {
+			"title": "What I Do",
+			"webDevelopment": "Web Development",
+			"webDevDescription": "Creating modern, responsive websites and web applications using the latest technologies.",
+			"optimization": "Performance Optimization",
+			"optimizationDescription": "Ensuring fast loading times and smooth interactions for the best user experience."
+		},
+		"myApproach": {
+			"title": "My Approach",
+			"description": "I focus on writing clean, maintainable code while ensuring excellent user experience. I believe in continuous learning and staying updated with the latest web development trends and best practices."
+		},
+		"technologies": {
+			"title": "Technologies & Skills"
+		},
+		"stats": {
+			"projects": "Projects Completed",
+			"experience": "Years of Experience",
+			"technologies": "Technologies Mastered",
+			"clients": "Happy Clients"
+		}
+	},
+	"projects": {
+		"title": "My Projects",
+		"description": "Here are some of my recent projects that showcase my skills and passion for frontend development.",
+		"categories": {
+			"all": "All",
+			"webApp": "Web App",
+			"dashboard": "Dashboard",
+			"portfolio": "Portfolio"
+		},
+		"buttons": {
+			"code": "Code",
+			"demo": "Demo"
+		},
+		"badges": {
+			"openSource": "Open Source",
+			"commercial": "Commercial"
+		},
+		"noProjects": "No projects found in this category.",
+		"tryDifferent": "Try selecting a different category to see more projects.",
+		"items": {
+			"weatherDashboard": {
+				"title": "Weather Dashboard",
+				"description": "A responsive weather dashboard with location-based forecasts, interactive maps, and beautiful data visualizations."
+			},
+			"portfolioWebsite": {
+				"title": "Portfolio Website V1",
+				"description": "A responsive portfolio website with smooth animations, dark mode support, and modern design patterns."
+			},
+			"xabPlanner": {
+				"title": "XabPlanner",
+				"description": "A comprehensive task management and planning application with intuitive interface, project organization, and productivity features."
+			},
+			"instrumentPro": {
+				"title": "Instrument Pro",
+				"description": "A modern e-commerce platform for tools and instruments with product catalog, shopping cart, user authentication, and payment processing."
+			},
+			"turtleSource": {
+				"title": "TurtleSource Team",
+				"description": "A professional portfolio website for my freelance development team showcasing services, team members, and completed projects."
+			}
+		}
+	},
+	"contact": {
+		"title": "Get In Touch",
+		"description": "I'm always open to discussing new opportunities and exciting projects. Let's create something amazing together!",
+		"info": {
+			"title": "Contact Information",
+			"email": "Email",
+			"phone": "Phone",
+			"location": "Location"
+		},
+		"social": {
+			"title": "Follow Me"
+		},
+		"form": {
+			"title": "Send Me a Message",
+			"name": "Name",
+			"namePlaceholder": "Your Name",
+			"email": "Email",
+			"emailPlaceholder": "your.email@example.com",
+			"message": "Message",
+			"messagePlaceholder": "Your message here...",
+			"submit": "Send Message",
+			"sending": "Sending...",
+			"success": "Message sent successfully! I'll get back to you soon."
+		}
+	},
+	"footer": {
+		"role": "Frontend Developer",
+		"backToTop": "Back to Top",
+		"madeWith": "Made with ❤️ using React & Tailwind CSS",
+		"allRights": "All rights reserved."
+	}
+}
