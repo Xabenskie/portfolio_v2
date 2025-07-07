@@ -7,7 +7,7 @@
 	},
 	"header": {
 		"greeting": "Hi everyone,",
-		"name": "I'm Xabenskie, Frontend Developer",
+		"name": "I'm Kostya, Frontend Developer",
 		"welcome": "Welcome to my portfolio!"
 	},
 	"about": {
@@ -86,7 +86,7 @@
 		"info": {
 			"title": "Contact Information",
 			"email": "Email",
-			"phone": "Phone",
+			"telegram": "Telegram",
 			"location": "Location"
 		},
 		"social": {
@@ -102,7 +102,8 @@
 			"messagePlaceholder": "Your message here...",
 			"submit": "Send Message",
 			"sending": "Sending...",
-			"success": "Message sent successfully! I'll get back to you soon."
+			"success": "Message sent successfully! I'll get back to you soon.",
+			"error": "Failed to send message. Please try again later."
 		}
 	},
 	"footer": {

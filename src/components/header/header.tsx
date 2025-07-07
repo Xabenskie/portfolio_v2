@@ -1,4 +1,5 @@
 import HeaderIcon from '@/assets/header-icon.svg'
+import { contactInfoData } from '@/utils'
 import { useTranslation } from 'react-i18next'
 
 export function Header() {
@@ -29,7 +30,7 @@ export function Header() {
 					{/* Contact Icons */}
 					<div className='flex items-center justify-center sm:justify-start gap-4 mt-6 sm:mt-8'>
 						<a
-							href='https://github.com/xabenskie'
+							href={contactInfoData.github}
 							target='_blank'
 							rel='noopener noreferrer'
 							className='w-10 h-10 sm:w-12 sm:h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110'
@@ -44,7 +45,7 @@ export function Header() {
 							</svg>
 						</a>
 						<a
-							href='https://t.me/@wedhhe'
+							href={`https://t.me/${contactInfoData.telegram}`}
 							target='_blank'
 							rel='noopener noreferrer'
 							className='w-10 h-10 sm:w-12 sm:h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110'
@@ -59,7 +60,7 @@ export function Header() {
 							</svg>
 						</a>
 						<a
-							href='mailto:lukyanovkr@gmail.com'
+							href={`mailto:${contactInfoData.email}`}
 							className='w-10 h-10 sm:w-12 sm:h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110'
 							aria-label='Email'
 						>

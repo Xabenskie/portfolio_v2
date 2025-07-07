@@ -97,3 +97,10 @@ export const getProjectsData = (t: (key: string) => string): Project[] => [
 		openSource: false
 	}
 ]
+
+export const contactInfoData = {
+	email: 'lukyanovkr@gmail.com',
+	telegram: '@wedhhe',
+	location: 'Russia, Moscow',
+	github: 'https://github.com/Xabenskie'
+}
